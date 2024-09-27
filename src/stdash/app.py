@@ -6,7 +6,9 @@ import requests
 st.title('CNN Model build')
 
 def load_data():
-    url = 'http://43.202.66.118:8077/all'
+    DB = os.getenv('DB')
+    DB_PORT =os.getenv('DB_PORT')
+    url = f'http://{DB}:{DB_PORT}/all'
     r = requests.get(url)
     d = r.json()
     return d
