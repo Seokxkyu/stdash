@@ -33,19 +33,3 @@ plt.ylabel('Number of Requests')
 plt.xticks(rotation = 45)
 st.pyplot(plt)
 
-
-model_stats = df.groupby(['request_user', 'prediction_model']).agg({
-    'prediction_time': ['mean', 'max', 'min', 'count']
-}).reset_index()
-
-model_stats.columns = ['request_user', 'prediction_model', 'avg_prediction_time', 'max_prediction_time', 'min_prediction_time', 'request_count']
-
-st.header('요청 별 활용 모델 통계')
-plt.figure(figsize=(12,8))
-ax = model_stats.pivot(index='request_user', columns='prediction_model', values='request_count').plot(kind='barh', stacked=True)
-plt.title('Number of Requests per User and Model')
-plt.ylabel('Request Count')
-ax.legend(title='Prediction Model', prop={'size': 8})
-st.pyplot(plt)
-
-
