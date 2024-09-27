@@ -4,7 +4,7 @@ import requests
 import matplotlib.pyplot as plt
 
 # Set up the Streamlit app configuration
-st.set_page_config(page_title="Model Accuracy Statistics", page_icon="📈")
+st.set_page_config(page_title="Model Accuracy Statistics", page_icon="🏅")
 
 # Title of the app
 st.title('Model Accuracy Statistics')
