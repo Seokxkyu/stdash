@@ -41,5 +41,6 @@ ax = accuracy_stats.plot(kind='bar', x='prediction_model', y='accuracy', legend=
 plt.title('Model Accuracy')
 plt.xlabel('Prediction Model')
 plt.ylabel('Accuracy')
+plt.xticks(rotation=45)
 
 st.pyplot(plt)
