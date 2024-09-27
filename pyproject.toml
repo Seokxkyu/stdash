@@ -19,19 +19,3 @@ license = {text = "MIT"}
 [tool.pdm]
 distribution = false
 
-[tool.poetry]
-name = "stdash"
-version = "0.2.0"
-description = "Default template for Poetry package"
-authors = ["Seokxkyu <kyuseok000@gmail.com>"]
-readme = "README.md"
-license = "MIT"
-
-[tool.poetry.dependencies]
-python = ">=3.11"
-streamlit = ">=1.38.0"
-matplotlib = ">=3.9.2"
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
