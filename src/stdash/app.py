@@ -40,6 +40,7 @@ model_stats = df.groupby(['request_user', 'prediction_model']).agg({
 
 model_stats.columns = ['request_user', 'prediction_model', 'avg_prediction_time', 'max_prediction_time', 'min_prediction_time', 'request_count']
 
+st.header('요청 별 활용 모델 통계')
 plt.figure(figsize=(12,8))
 ax = model_stats.pivot(index='request_user', columns='prediction_model', values='request_count').plot(kind='barh', stacked=True)
 plt.title('Number of Requests per User and Model')
