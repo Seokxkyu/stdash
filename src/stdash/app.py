@@ -45,7 +45,6 @@ ax = model_stats.pivot(index='request_user', columns='prediction_model', values=
 plt.title('Number of Requests per User and Model')
 plt.ylabel('Request Count')
 ax.legend(title='Prediction Model', prop={'size': 8})
-plt.show()
-
+st.pyplot(plt)
 
 
