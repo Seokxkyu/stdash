@@ -1,6 +1,6 @@
 [project]
 name = "stdash"
-version = "0.1.0"
+version = "0.2.0"
 description = "Default template for PDM package"
 authors = [
     {name = "Seokxkyu", email = "kyuseok000@gmail.com"},
@@ -8,11 +8,14 @@ authors = [
 dependencies = [
     "streamlit>=1.38.0",
     "matplotlib>=3.9.2",
+    "pandas>=2.0.0",
+    "requests>=2.31.0"
 ]
-requires-python = "==3.11.*"
+requires-python = ">=3.11"
 readme = "README.md"
 license = {text = "MIT"}
 
 
 [tool.pdm]
 distribution = false
+
